@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hello bitches</title>
+     <style>
+        div {
+            padding: 5px; /* Поля вокруг текста */
+            margin-bottom: 5px; /* Отступ снизу */
+   }
+   #center { text-align: center; }
+   .content {
+       width: 75%; /* Ширина слоя */
+       background: #fc0; /* Цвет фона */
+   }
+  </style>
+</head>
+<body>
+    {% for university in universities %}
+        <div id="center">{{ university.name }}
+            image<br>
+         <img src= {{ university.image_url }} alt=Not_Found" style="width:304px;height:228px;"><br><br>
+            {{ university.image_url }}<br>
+            logo<br>
+          <img src= {{ university.logo_url }} alt="Not_Found" style="width:304px;height:228px;"><br>
+            {{ university.logo_url }}<br>
+        </div>
+
+    {% endfor %}
+</body>
+</html>
